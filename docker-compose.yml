@@ -9,12 +9,12 @@ services:
       - ./server:/app
       - /app/node_modules
   client:
-    build: ./client
-    container_name: client_c
+    build: ./frontend
+    container_name: frontend_c
     ports:
       - '3000:3000'
     volumes:
-      - ./client:/app
+      - ./frontend:/app
       - /app/node_modules
     stdin_open: true
     tty: true
