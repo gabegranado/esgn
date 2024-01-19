@@ -3,22 +3,30 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="video-responsive">
+
+      {/* YoutubeLive */}
+      <iframe
+       width="560" 
+      height="315"
+      src="https://www.youtube.com/embed/jfKfPfyJRdk?si=KMMbn5ZsvLrrAH_9"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+      </iframe>
+
+      {/* Twitch */}
+      {/* Must add website domain */}
+      <iframe 
+      src="https://player.twitch.tv/?channel=gamesdonequick&parent=localhost" 
+      frameborder="0"
+      allowfullscreen="true"
+      scrolling="no"
+      height="378"
+      width="620">
+      </iframe>
+  </div>
   );
 }
 
