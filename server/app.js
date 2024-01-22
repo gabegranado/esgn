@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     console.log("get test res")
     res.json([
         {
-            "test": "test"
+            "test": "testgi"
         }
     ])
 })
