@@ -2,7 +2,7 @@ import express from "express";
 
 import {
     getHeadlines
-  } from "../controllers/newsControllers.js";
+  } from "../controllers/homeControllers.js";
   const router = express.Router();
 
   router.get("/", getHeadlines);

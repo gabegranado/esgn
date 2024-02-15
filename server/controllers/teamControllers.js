@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import Team from "../model/teamModel.js";
+import Team from '../models/teamModel.js';
 
 const router = express.Router();
 
