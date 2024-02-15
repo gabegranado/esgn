@@ -1,19 +1,19 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import News from "../model/newsModel.js";
+import Home from "../models/homeModel.js";
 
 const router = express.Router();
 
 export const getHeadlines = async (req, res) => {
     try {
-        const allHeadlines = await News.find();
-        //Gets all News, not necescarily headlines
+        //What does Home.find do??
+        const allHeadlines = await Home.find();
         console.log("found healines");
         console.log("all headlines ", allHeadlines);
         res.status(200).json(allHeadlines);
       } catch (error) {
-        console.log("error getMovies");
+        console.log("error getHeadlines");
         res.status(409).json({ message: error.message });
       }
 };

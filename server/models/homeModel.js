@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-const NewsSchema = mongoose.Schema({
+const HomeSchema = mongoose.Schema({
     headline: {type: String, lowercase: true, required: true, unique: false},
     websiteLink: {type: String, lowercase: true, required: true, unique: false},
     //pictures links??
 })
 
-var News = mongoose.model('News', NewsSchema);
-export default News;
+var Home = mongoose.model('Home', HomeSchema);
+export default Home;
