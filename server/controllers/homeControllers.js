@@ -18,5 +18,21 @@ export const getHeadlines = async (req, res) => {
       }
 };
 
+export const postHeadlines = async (req, res) => {
+  const { testData } = req.body;
+
+  const newHeadline = new Home({ 
+    headline: 'test',
+    websiteLink: 'test'
+   });
+
+  try {
+      await newHeadline.save();
+
+      res.status(201).json(newHeadline);
+  } catch (error) {
+      res.status(409).json({ message: error.message });
+  }
+}
 
 export default router;
