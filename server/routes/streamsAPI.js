@@ -1,10 +1,12 @@
 import express from "express";
 
 import {
-    //getHeadlines
+    getStreams, addStreams, deleteStream
   } from "../controllers/streamsControllers.js";
   const router = express.Router();
 
-  //router.get("/", getHeadlines);
+  router.get('/', getStreams);
+  router.post('/', addStreams);
+  router.delete("/:streamID", deleteStream);
   
   export default router;
