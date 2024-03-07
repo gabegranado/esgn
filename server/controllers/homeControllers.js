@@ -5,34 +5,42 @@ import Home from "../models/homeModel.js";
 
 const router = express.Router();
 
-export const getHeadlines = async (req, res) => {
+export const getArticles = async (req, res) => {
     try {
-        //What does Home.find do??
-        const allHeadlines = await Home.find();
-        console.log("found healines");
-        console.log("all headlines ", allHeadlines);
-        res.status(200).json(allHeadlines);
+        const allArticles = await Home.find();
+        console.log("found articles");
+        console.log("all articles ", allArticles);
+        res.status(200).json(allArticles);
       } catch (error) {
         console.log("error getHeadlines");
         res.status(409).json({ message: error.message });
       }
 };
 
-export const postHeadlines = async (req, res) => {
-  const { testData } = req.body;
+export const addArticles = async (req, res) => {
+  const {
+      headline,
+      websiteLink
+    } = req.body;
+  
+    const newStream = new Home({
+      headline,
+      websiteLink
+    });
 
-  const newHeadline = new Home({ 
-    headline: 'test',
-    websiteLink: 'test'
-   });
-
-  try {
-      await newHeadline.save();
-
-      res.status(201).json(newHeadline);
-  } catch (error) {
-      res.status(409).json({ message: error.message });
-  }
+    if (req.body.title== "") {
+      console.log("Invalid article headline");
+      res.send("Invalid article headline");
+    } else {
+      try {
+        await newStream.save();
+        console.log("Article Added");
+        res.status(201).json(newStream);
+      } catch (error) {
+        console.log("Article addStream ", error.message);
+        res.status(409).json({ message: error.message });
+      }
+    }
 }
 
 export default router;

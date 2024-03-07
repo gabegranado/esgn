@@ -1,10 +1,10 @@
 import express from "express";
 
 import {
-    findTeamById
+    //findTeamById
   } from "../controllers/teamControllers.js";
   const router = express.Router();
 
-  router.get("/findTeamById/:teamId", findTeamById);
+  //router.get("/findTeamById/:teamId", findTeamById);
   
   export default router;
