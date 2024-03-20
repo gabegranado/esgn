@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
+import Homepage from "./components/Homepage/Hero";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
     font-[Poppins] md:bg-top bg-center"
     >
       <Navbar />
+      <Homepage />
     </section>
   );
 };
