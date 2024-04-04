@@ -1,4 +1,5 @@
 import Header from "../components/signin-up/Header";
+import Login from "../components/signin-up/Login";
 
 export default function LoginPage() {
   return (
@@ -9,6 +10,7 @@ export default function LoginPage() {
         linkName="Signup"
         linkUrl="/signup"
       />
+      <Login />
     </>
   );
 }
