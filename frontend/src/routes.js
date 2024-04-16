@@ -7,7 +7,7 @@ import LoginPage from "./pages/Login";
 
 export default (
   <Route path="/" component={App}>
-    <Route path="/signup" component={SignupPage} />
-    <Route path="/Login" component={LoginPage} />
+    <Route path="signup" component={SignupPage} />
+    <Route path="Login" component={LoginPage} />
   </Route>
 );
