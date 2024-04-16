@@ -5,11 +5,11 @@ import Homepage from "./components/Homepage/Hero";
 const App = () => {
   return (
     <section
-      className="h-screen bg-cover
-    font-[Poppins] md:bg-top bg-center"
+    //   className="h-screen bg-cover
+    // font-[Poppins] md:bg-top bg-center"
     >
       <Navbar />
-      <Homepage />
+      {/* <Homepage /> */}
     </section>
   );
 };
