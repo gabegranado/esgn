@@ -1,16 +1,37 @@
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/Homepage/Hero";
+import Watch from "./pages/watch.tsx";
+import SignupPage from "./pages/Signup";
+import LoginPage from "./pages/Login";
+import Test from "./pages/Test";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <section
-    //   className="h-screen bg-cover
-    // font-[Poppins] md:bg-top bg-center"
-    >
-      <Navbar />
-      {/* <Homepage /> */}
-    </section>
+    <Router> 
+      <Navbar/>
+      <Routes>
+      <Route path="/" element={<Watch />} />
+      <Route path="/SignUp" element={<SignupPage />} />
+      <Route path="/Login" element={<LoginPage />} />
+      <Route path="/Test" element={<Test />} />
+      </Routes>
+    </Router>
+    // <section
+    // //   className="h-screen bg-cover
+    // // font-[Poppins] md:bg-top bg-center"
+    // >
+    //   <Navbar />
+    //   <Watch />
+    //   {/* <Homepage /> */}
+    // </section>
   );
 };
 
