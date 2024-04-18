@@ -15,15 +15,17 @@ import {
 
 const App = () => {
   return (
-    <Router> 
-      <Navbar/>
-      <Routes>
-      <Route path="/" element={<Watch />} />
-      <Route path="/SignUp" element={<SignupPage />} />
-      <Route path="/Login" element={<LoginPage />} />
-      <Route path="/Test" element={<Test />} />
-      </Routes>
-    </Router>
+    <div className="scrollbar-hide">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Watch />} />
+          <Route path="/SignUp" element={<SignupPage />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Test" element={<Test />} />
+        </Routes>
+      </Router>
+    </div>
     // <section
     // //   className="h-screen bg-cover
     // // font-[Poppins] md:bg-top bg-center"
