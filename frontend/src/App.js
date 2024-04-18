@@ -4,7 +4,7 @@ import Homepage from "./components/Homepage/Hero";
 import Watch from "./pages/watch.tsx";
 import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
-import Test from "./pages/Test";
+import Home from "./pages/Home";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,7 +21,7 @@ const App = () => {
       <Route path="/" element={<Watch />} />
       <Route path="/SignUp" element={<SignupPage />} />
       <Route path="/Login" element={<LoginPage />} />
-      <Route path="/Test" element={<Test />} />
+      <Route path="/Home" element={<Home />} />
       </Routes>
     </Router>
     // <section
