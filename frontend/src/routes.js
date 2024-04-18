@@ -5,14 +5,14 @@ import App from "./App";
 import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import Watch from "./pages/watch.tsx";
-import Test from "./pages/Test";
+import Home from "./pages/Home.jsx";
 
 export default (
   <Route path="/" component={App}>
     <Route path="/signup" component={SignupPage} />
     <Route path="/Login" component={LoginPage} />
     <Route path="/Watch" component={Watch} />
-    <Route path="/Test" component={Test} />
+    <Route path="/Home" component={Home} />
 
   </Route>
 );
