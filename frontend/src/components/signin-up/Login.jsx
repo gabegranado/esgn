@@ -8,6 +8,7 @@ import { useSignIn } from "react-auth-kit";
 import { Cookies } from "react-cookie";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { signInAction } from "../../actions/user";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -48,6 +49,7 @@ export default function Login() {
       });
       const username = cookies.get("_auth_state").identifier;
       console.log("COOKKIIES", cookies.get("_auth_state").identifier);
+      dispatch(signInAction())
       navigate(`/home`);
 
     } catch (err) {

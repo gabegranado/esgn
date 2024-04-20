@@ -17,6 +17,7 @@ export default function Test() {
   const [shownHeadlines, setShownHeadlines] = useState([]);
 
   useEffect(() => {
+
     dispatch(getArticles());
   }, [dispatch]);
 

@@ -3,8 +3,23 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import Button from "../Button";
 import NavLinks from "./NavLinks";
+import Cookies from 'js-cookie';
+import SignOutOrInButton from "./SignOutOrInButton";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const user = Cookies.get('_auth_state');
+
+  var username = ""
+
+  if (user) {
+  for (var key in JSON.parse(user)) {
+    if (key == 'identifier') {
+      username = JSON.parse(user)[key]
+    }
+  }
+}
   return (
     <nav className="bg-black text-white">
       <div className="flex items-center font-medium text-xs">
@@ -24,7 +39,8 @@ const Navbar = () => {
           <NavLinks />
         </ul>
         <div className="md:block hidden">
-          <Button />
+          {/* <Button /> */}
+          <SignOutOrInButton/>
         </div>
         {/* Mobile nav */}
         <ul

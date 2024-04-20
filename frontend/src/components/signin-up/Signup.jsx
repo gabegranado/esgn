@@ -7,6 +7,7 @@ import FormAction from "./FormAction";
 import Input from "./Input";
 import axios, { AxiosError } from "axios";
 import { useSignIn } from "react-auth-kit";
+import { signInAction } from "../../actions/user";
 
 const fields = signupFields;
 let fieldsState = {};
@@ -42,8 +43,8 @@ export default function Signup() {
               authState: { identifier: data.data.username },
             });
             // dispatch(getPosts(data.data.username));
-            // browserHistory.push("UserAccount");
             // navigate(`/UserAccount/${data.data.username}`);
+            dispatch(signInAction())
             navigate('/home')
           } else {
             console.log("error");
