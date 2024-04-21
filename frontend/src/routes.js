@@ -6,6 +6,7 @@ import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import Watch from "./pages/watch.tsx";
 import Home from "./pages/Home.jsx";
+import SingleWatch from "./pages/SingleWatch";
 
 export default (
   <Route path="/" component={App}>
@@ -13,6 +14,7 @@ export default (
     <Route path="/Login" component={LoginPage} />
     <Route path="/Watch" component={Watch} />
     <Route path="/Home" component={Home} />
+    <Route path="/watch" component={SingleWatch} />
 
   </Route>
 );

@@ -5,6 +5,8 @@ import Watch from "./pages/watch.tsx";
 import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import Home from "./pages/Home";
+import SingleWatch from "./pages/SingleWatch";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +24,7 @@ const App = () => {
         <Route path="/SignUp" element={<SignupPage />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Watch" element={<SingleWatch />} />
       </Routes>
     </Router>
   );
