@@ -1,30 +1,37 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
+import Logo1 from "../../assets/ESGNLOGO1.png";
 import Button from "../Button";
 import NavLinks from "./NavLinks";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 import SignOutOrInButton from "./SignOutOrInButton";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const user = Cookies.get('_auth_state');
+  const user = Cookies.get("_auth_state");
 
-  var username = ""
+  var username = "";
 
   if (user) {
-  for (var key in JSON.parse(user)) {
-    if (key == 'identifier') {
-      username = JSON.parse(user)[key]
+    for (var key in JSON.parse(user)) {
+      if (key == "identifier") {
+        username = JSON.parse(user)[key];
+      }
     }
   }
-}
   return (
     <nav className="bg-black text-white">
-      <div className="flex items-center font-medium text-xs">
+      <div className="flex items-center font-medium text-xs justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          {/* <img src={Logo} alt="logo" className="md:cursor-pointer h-9" /> */}
+          <Link to="/home">
+            <img
+              src={Logo1}
+              alt="logo"
+              className="w-18 md:cursor-pointer h-7"
+            />
+          </Link>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
           </div>
@@ -40,7 +47,7 @@ const Navbar = () => {
         </ul>
         <div className="md:block hidden">
           {/* <Button /> */}
-          <SignOutOrInButton/>
+          <SignOutOrInButton />
         </div>
         {/* Mobile nav */}
         <ul
@@ -55,6 +62,7 @@ const Navbar = () => {
             </Link>
           </li>
           <NavLinks />
+
           <div className="py-5">
             <Button />
           </div>

@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <SidebarProvider>
-      <div className="max-h-screen flex flex-col scrollbar-hide">
+      <div className="max-h-screen flex justify-center scrollbar-hide">
         {/* <PageHeader /> */}
         <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
           {/* <Sidebar /> */}

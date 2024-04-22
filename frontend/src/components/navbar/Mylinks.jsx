@@ -278,20 +278,4 @@ export const links = [
       },
     ],
   },
-  {
-    name: "...",
-    submenu: true,
-    sublinks: [
-      {
-        Head: "More Games",
-        sublink: [
-          { name: "TBA", link: "/" },
-          { name: "TBA", link: "/" },
-          { name: "TBA", link: "/" },
-          { name: "TBA", link: "/" },
-          { name: "TBA", link: "/" },
-        ],
-      },
-    ],
-  },
 ];
