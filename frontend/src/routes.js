@@ -6,7 +6,7 @@ import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import Watch from "./pages/watch.tsx";
 import Home from "./pages/Home.jsx";
-import SingleWatch from "./pages/SingleWatch";
+import SingleWatch from "./pages/SingleWatch.jsx";
 
 export default (
   <Route path="/" component={App}>
