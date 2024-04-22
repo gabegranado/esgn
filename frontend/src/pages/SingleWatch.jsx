@@ -46,6 +46,23 @@ export default function SingleWatch() {
         }
         const latestEvent = events[events.length - 1];
 
+        const hasUpdate = () => {
+          if (latestEvent) {
+            return (
+              <Typography variant="body1">
+              Team 1 Score: {latestEvent.fullDocument.team1Score} <br />
+              Team 2 Score: {latestEvent.fullDocument.team2Score}
+              </Typography>
+
+            )
+          } else {
+            return (
+              <Typography variant="body1">
+              Team 1 Score: - <br />
+              Team 2 Score: -
+              </Typography>            )
+          }
+        }
 
 // Return the JSX that will generate HTML for the page
 // Return the JSX that will generate HTML for the page
@@ -66,10 +83,7 @@ return (
       <Typography variant="h6" color="primary">
         Latest Score
       </Typography>
-      <Typography variant="body1">
-        Team 1 Score: {latestEvent.fullDocument.team1Score} <br />
-        Team 2 Score: {latestEvent.fullDocument.team2Score}
-      </Typography>
+        {hasUpdate()}
     </Paper>
     </div>
   );
