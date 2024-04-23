@@ -7,7 +7,7 @@ import { Sidebar } from "../components/AllWatch/layouts/Sidebar.tsx";
 import { SidebarProvider } from "../components/AllWatch/contexts/SidebarContext.tsx";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { getSubscribed } from '../actions/subscribe.js';
+import { getSubscribed } from "../actions/subscribe.js";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export default function App() {
 
   // Fetch subscribed data when the component mounts
   useEffect(() => {
-    dispatch(getSubscribed('66244ebbbba78766afb8efff'));
+    dispatch(getSubscribed("66244ebbbba78766afb8efff"));
   }, []);
 
   // Update shown subscribed when subscribed data changes
