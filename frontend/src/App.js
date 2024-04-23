@@ -15,29 +15,16 @@ import {
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    <div className="scrollbar-hide">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Watch />} />
-          <Route path="/SignUp" element={<SignupPage />} />
-          <Route path="/Login" element={<LoginPage />} />
-          <Route path="/Test" element={<Test />} />
-        </Routes>
-      </Router>
-    </div>
-=======
-    <Router> 
-      <Navbar/>
+    <Router>
+      <Navbar />
       <Routes>
-      <Route path="/" element={<Watch />} />
-      <Route path="/SignUp" element={<SignupPage />} />
-      <Route path="/Login" element={<LoginPage />} />
-      <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Watch />} />
+        <Route path="/SignUp" element={<SignupPage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </Router>
->>>>>>> 44ea344f747a0254f0cbb5dfb4cf6aa939fd7189
+
     // <section
     // //   className="h-screen bg-cover
     // // font-[Poppins] md:bg-top bg-center"
