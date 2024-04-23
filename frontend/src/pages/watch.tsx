@@ -1,14 +1,32 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CategoryPills } from "../components/AllWatch/CategoryPills.tsx";
 import { categories, videos } from "../components/AllWatch/data/home.ts";
 import { PageHeader } from "../components/AllWatch/layouts/PageHeader.tsx";
 import { VideoGridItem } from "../components/AllWatch/VideoGridItem.tsx";
 import { Sidebar } from "../components/AllWatch/layouts/Sidebar.tsx";
 import { SidebarProvider } from "../components/AllWatch/contexts/SidebarContext.tsx";
-import React from "react";
+import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { getSubscribed } from '../actions/subscribe.js';
 
 export default function App() {
+  const dispatch = useDispatch();
+  const subscribed = useSelector((state) => state.subscribed);
+  const [shownSubscribed, setShownSubscribed] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
+  // Fetch subscribed data when the component mounts
+  useEffect(() => {
+    dispatch(getSubscribed('66244ebbbba78766afb8efff'));
+  }, []);
+
+  // Update shown subscribed when subscribed data changes
+  useEffect(() => {
+    const subscribeSelection = Object.values(subscribed).filter(
+      (subscribed) => subscribed.subscribed
+    );
+    setShownSubscribed(subscribeSelection);
+  }, [subscribed]);
 
   return (
     <SidebarProvider>
@@ -23,6 +41,12 @@ export default function App() {
                 selectedCategory={selectedCategory}
                 onSelect={setSelectedCategory}
               />
+            </div>
+            <h1>HERE:</h1>
+            <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+              {subscribed.map((subscribe) => (
+                <h2>{subscribe.userID}</h2>
+              ))}
             </div>
             <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
               {videos.map((video) => (

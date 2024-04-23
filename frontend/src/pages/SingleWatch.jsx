@@ -11,16 +11,28 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import  *  as  Realm  from  "realm-web";
+import axios from "axios";
 
 export default function SingleWatch() {
     const  app = new  Realm.App({ id:  "application-0-eruvmsm"});
     const [user, setUser] = useState();
     const [events, setEvents] = useState([]);
     var prev = '2000';
+    var team1Score;
+    var team2Score;
+    const [teamScores, setTeamScores] = useState([0, 0]);
 
     useEffect(() => {
         const  login = async () => {
+        const response = await axios.get(
+            "http://localhost:4000/scores/662462622836214d5ddbbd2f");
         // Authenticate anonymously
+        console.log("team a score", response.data.team1Score, response.data.team2Score);
+        team1Score = response.data.team1Score;
+        team2Score = response.data.team2Score;
+        setTeamScores([response.data.team1Score, response.data.team2Score]);
+
+
         const  user = await  app.logIn(Realm.Credentials.anonymous());
         setUser(user);
         
@@ -58,8 +70,8 @@ export default function SingleWatch() {
           } else {
             return (
               <Typography variant="body1">
-              Team 1 Score: - <br />
-              Team 2 Score: -
+              Team 1 Score: {teamScores[0]} <br />
+              Team 2 Score: {teamScores[1]}
               </Typography>            )
           }
         }

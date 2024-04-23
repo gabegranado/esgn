@@ -12,13 +12,25 @@ const SignOutOrInButton = () => {
   console.log("AUTHTHTHTHTH", isAuthenticated);
   const [cookies, setCookie, removeCookie] = useCookies(["cookie-name"]);
 
+  const user = Cookies.get("_auth_state");
+
+  var username = "";
+
+  if (user) {
+    for (var key in JSON.parse(user)) {
+      if (key == "identifier") {
+        username = JSON.parse(user)[key];
+      }
+    }
+  }
+
   const handleSignOut = () => {
     Cookies.remove("_auth_state")
     dispatch(signOutAction()); // Dispatch the signOut action
     navigate("/");
   };
 
-  if (isAuthenticated) {
+  if (isAuthenticated || username != "") {
     return <button onClick={handleSignOut}>Sign Out</button>;
   } else {
     return (

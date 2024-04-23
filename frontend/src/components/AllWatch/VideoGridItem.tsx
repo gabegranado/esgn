@@ -35,22 +35,22 @@ export function VideoGridItem({
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    if (videoRef.current == null) return;
+  // useEffect(() => {
+  //   if (videoRef.current == null) return;
 
-    if (isVideoPlaying) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  }, [isVideoPlaying]);
+  //   if (isVideoPlaying) {
+  //     videoRef.current.currentTime = 0;
+  //     videoRef.current.play();
+  //   } else {
+  //     videoRef.current.pause();
+  //   }
+  // }, [isVideoPlaying]);
 
   return (
     <div
       className="flex flex-col gap-2"
-      onMouseEnter={() => setIsVideoPlaying(true)}
-      onMouseLeave={() => setIsVideoPlaying(false)}
+      // onMouseEnter={() => setIsVideoPlaying(true)}
+      // onMouseLeave={() => setIsVideoPlaying(false)}
     >
       <a href={`/watch?v=${id}`} className="relative aspect-video">
         <img
