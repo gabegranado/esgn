@@ -24,7 +24,7 @@ export default function App() {
 
   // Fetch subscribed data when the component mounts
   useEffect(() => {
-    dispatch(getSubscribed('66244ebbbba78766afb8efff'));
+    dispatch(getSubscribed("66244ebbbba78766afb8efff"));
   }, []);
 
   // Update shown subscribed when subscribed data changes

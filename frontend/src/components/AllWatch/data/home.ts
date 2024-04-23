@@ -7,6 +7,9 @@ const owfvn = require("../../../assets/feedpics/owfazevnavi.jpg");
 const owvvc9 = require("../../../assets/feedpics/owvitvc9.jpg");
 const dhillvgold = require("../../../assets/feedpics/dhillvgold.jpg");
 const owlogo = require("../../../assets/feedpics/owlogo.jpg");
+const RLVITvBDS = require("../../../assets/feedpics/RLVITvBDS.jpg");
+const CS2Logo = require("../../../assets/feedpics/CS2.jpg");
+const RLLogo = require("../../../assets/feedpics/RL.jpg");
 
 export const categories = [
   "All",
@@ -21,19 +24,17 @@ export const categories = [
 export const videos = [
   {
     id: "1",
-    title: "Current Live Game",
+    title: "Rocketleague Playoffs Game Team Vitality vs Team BDS",
     channel: {
-      name: "Some Game",
-      id: "Some Game",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
+      name: "Rocket League",
+      id: "Rocket League",
+      profileUrl: RLLogo,
     },
     views: 42345,
     postedAt: new Date("2024-04-23"),
     duration: 1000,
-    thumbnailUrl: "https://i.ytimg.com/vi/M3mGY0pgFk0/maxresdefault.jpg",
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    thumbnailUrl: RLVITvBDS,
+    videoUrl: "",
   },
   {
     id: "2",
@@ -48,8 +49,7 @@ export const videos = [
     duration: 938,
     // thumbnailUrl: "https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg",
     thumbnailUrl: fqpsg,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "3",
@@ -63,8 +63,7 @@ export const videos = [
     postedAt: new Date("2024-05-01"),
     duration: 732,
     thumbnailUrl: t1vestral,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "4",
@@ -78,8 +77,7 @@ export const videos = [
     postedAt: new Date("2024-05-02"),
     duration: 120,
     thumbnailUrl: fnvgam,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "5",
@@ -93,8 +91,7 @@ export const videos = [
     postedAt: new Date("2024-05-02"),
     duration: 4343,
     thumbnailUrl: topvloud,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "8",
@@ -108,37 +105,34 @@ export const videos = [
     postedAt: new Date("2024-04-20"),
     duration: 105,
     thumbnailUrl: dhillvgold,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "6",
     title: "Faze Clan vs Natus Vincere",
     channel: {
-      name: "Overwatch",
-      id: "Overwatch",
-      profileUrl: owlogo,
+      name: "CounterStrike2",
+      id: "CounterStrike2",
+      profileUrl: CS2Logo,
     },
     views: 10340,
     postedAt: new Date("2024-03-31"),
     duration: 54,
     thumbnailUrl: owfvn,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
   {
     id: "7",
     title: "Vitality vs Cloud9",
     channel: {
-      name: "Overwatch",
-      id: "Overwatch",
-      profileUrl: owlogo,
+      name: "CounterStrike2",
+      id: "CounterStrike2",
+      profileUrl: CS2Logo,
     },
     views: 10323340,
     postedAt: new Date("2024-02-20"),
     duration: 100,
     thumbnailUrl: owvvc9,
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    videoUrl: "",
   },
 ];
