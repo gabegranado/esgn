@@ -28,7 +28,7 @@ export const setGame = async (req, res) => {
         team1Name,
         team2Name
     });
-
+ 
     if (req.body.title== "") {
       console.log("No game info provided");
       res.send("No game info provided");

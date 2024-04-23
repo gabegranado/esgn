@@ -17,6 +17,20 @@ export const getSubscribed = async (req, res) => {
       }
 };
 
+export const getOneSubscribed = async (req, res) => {
+  try {
+    console.log("TEST", req.params.gameID);
+      const allSub = await Subscribe.findOne({ gameID: req.params.gameID});
+      console.log("Found one");
+      console.log("one subbed ", allSub);
+      res.status(200)
+      .json(allSub);
+    } catch (error) {
+      console.log("error getSub");
+      res.status(409).json({ message: error.message });
+    }
+};
+
 export const subscribe = async (req, res) => {
     const {
         gameID,

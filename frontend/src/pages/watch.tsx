@@ -8,12 +8,19 @@ import { SidebarProvider } from "../components/AllWatch/contexts/SidebarContext.
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { getSubscribed } from '../actions/subscribe.js';
+import { SubscribeVideoItem } from "../components/AllWatch/SubscribeVideoItem.js";
+import { Typography } from "@mui/material";
+import following from '../assets/icons/following.png';
+import allGames from '../assets/icons/allGames.png';
 
 export default function App() {
   const dispatch = useDispatch();
   const subscribed = useSelector((state) => state.subscribed);
   const [shownSubscribed, setShownSubscribed] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  
+
+
 
   // Fetch subscribed data when the component mounts
   useEffect(() => {
@@ -28,6 +35,23 @@ export default function App() {
     setShownSubscribed(subscribeSelection);
   }, [subscribed]);
 
+  const hasSubs = () => {
+    if (subscribed.length != 0) {
+      return (
+        <img 
+        src={following} 
+        style={{
+          display: 'block',
+          margin: '0 auto',
+          maxWidth: '400px',
+          height: 'auto',
+        }}
+      />
+      )
+    } else {
+      return;
+    }
+  }
   return (
     <SidebarProvider>
       <div className="max-h-screen flex justify-center scrollbar-hide">
@@ -42,12 +66,27 @@ export default function App() {
                 onSelect={setSelectedCategory}
               />
             </div>
-            <h1>HERE:</h1>
-            <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
-              {subscribed.map((subscribe) => (
-                <h2>{subscribe.userID}</h2>
-              ))}
+            <div>
+              {hasSubs()}
             </div>
+            <div>
+            <SubscribeVideoItem/>
+            </div>
+            <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]" style={{marginBottom: "20px"}}>
+  {subscribed.slice().reverse().map((subscribe) => (
+    <SubscribeVideoItem key={subscribe.gameID} gameID={subscribe.gameID}/>
+  ))}
+</div>
+
+            <img 
+        src={allGames} 
+        style={{
+          display: 'block',
+          margin: '0 auto',
+          maxWidth: '400px',
+          height: 'auto',
+        }}
+      />
             <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
               {videos.map((video) => (
                 <VideoGridItem key={video.id} {...video} />
