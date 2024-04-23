@@ -59,9 +59,9 @@ export function VideoGridItem({
             isVideoPlaying ? "rounded-none" : "rounded-xl"
           }`}
         />
-        <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded">
+        {/* <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded">
           {formatDuration(duration)}
-        </div>
+        </div> */}
         <video
           className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${
             isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"
@@ -84,7 +84,7 @@ export function VideoGridItem({
             {channel.name}
           </a>
           <div className="text-secondary-text text-sm">
-            {VIEW_FORMATTER.format(views)} Views • {formatTimeAgo(postedAt)}
+            {formatTimeAgo(postedAt)}
           </div>
         </div>
       </div>

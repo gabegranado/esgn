@@ -1,138 +1,143 @@
+const fqpsg = require("../../../assets/feedpics/FQvsPSG.jpg");
+const t1vestral = require("../../../assets/feedpics/T1vsEstral.jpg");
+const fnvgam = require("../../../assets/feedpics/FNvsGAM.jpg");
+const topvloud = require("../../../assets/feedpics/TOPvsLOUD.jpg");
+const LOL = require("../../../assets/feedpics/LOL.jpg");
+const owfvn = require("../../../assets/feedpics/owfazevnavi.jpg");
+const owvvc9 = require("../../../assets/feedpics/owvitvc9.jpg");
+const dhillvgold = require("../../../assets/feedpics/dhillvgold.jpg");
+const owlogo = require("../../../assets/feedpics/owlogo.jpg");
+
 export const categories = [
   "All",
   "League of Legends",
+  "Overwatch",
+  "Rocket League",
   "Dota 2",
   "Valorant",
   "Counter Strike",
   "Smash Bros",
 ];
-
 export const videos = [
   {
     id: "1",
-    title: "CSS Anchor Is The Best New CSS Feature Since Flexbox",
+    title: "Current Live Game",
     channel: {
-      name: "Web Dev Simplified",
-      id: "WebDevSimplified",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
-    },
-    views: 222536,
-    postedAt: new Date("2023-08-29"),
-    duration: 938,
-    thumbnailUrl: "https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg",
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-  },
-  {
-    id: "2",
-    title: "NEW Way To Create Variables In JavaScript",
-    channel: {
-      name: "Web Dev Simplified",
-      id: "WebDevSimplified",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
-    },
-    views: 257136,
-    postedAt: new Date("2023-08-22"),
-    duration: 732,
-    thumbnailUrl: "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-  },
-  {
-    id: "3",
-    title: "Front-end developer takes on a CSS battle",
-    channel: {
-      name: "Kevin Powell",
-      id: "KevinPowell",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
-    },
-    views: 1232300,
-    postedAt: new Date("2023-10-05"),
-    duration: 120,
-    thumbnailUrl: "https://i.ytimg.com/vi/eYPyIq5Y3Rk/maxresdefault.jpg",
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-  },
-  {
-    id: "4",
-    title: "Quick guide to CSS focus states",
-    channel: {
-      name: "Kevin Powell",
-      id: "KevinPowell",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
-    },
-    views: 112,
-    postedAt: new Date("2023-9-19"),
-    duration: 4343,
-    thumbnailUrl: "https://i.ytimg.com/vi/apdD69J4bEc/maxresdefault.jpg",
-    videoUrl:
-      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-  },
-  {
-    id: "5",
-    title: "I Cannot Believe React Made A Hook For This",
-    channel: {
-      name: "Web Dev Simplified",
-      id: "WebDevSimplified",
+      name: "Some Game",
+      id: "Some Game",
       profileUrl:
         "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
     },
     views: 42345,
-    postedAt: new Date("2023-03-02"),
+    postedAt: new Date("2024-04-23"),
     duration: 1000,
     thumbnailUrl: "https://i.ytimg.com/vi/M3mGY0pgFk0/maxresdefault.jpg",
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
   {
-    id: "6",
-    title: "I Got Laid Off...",
+    id: "2",
+    title: "FlyQuest vs PSG Talon",
     channel: {
-      name: "Caleb Curry",
-      id: "CalebCurry",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKbpSojje_-tkBQecNtFuPdSCrg3ZT0FhaYjln9k0g=s176-c-k-c0x00ffffff-no-rj",
+      name: "League of Legends",
+      id: "League of Legends",
+      profileUrl: LOL,
     },
-    views: 10340,
-    postedAt: new Date("2023-03-03"),
-    duration: 54,
-    thumbnailUrl: "https://i.ytimg.com/vi/i2JVQdLnkAY/maxresdefault.jpg",
+    views: 222536,
+    postedAt: new Date("2024-05-01"),
+    duration: 938,
+    // thumbnailUrl: "https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg",
+    thumbnailUrl: fqpsg,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
   {
-    id: "7",
-    title: "Tails OS in 100 Seconds",
+    id: "3",
+    title: "SKT T1 vs Estral Esports",
     channel: {
-      name: "Fireship",
-      id: "Fireship",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+      name: "League of Legends",
+      id: "League of Legends",
+      profileUrl: LOL,
     },
-    views: 10323340,
-    postedAt: new Date("2023-08-09"),
-    duration: 100,
-    thumbnailUrl: "https://i.ytimg.com/vi/mVKAyw0xqxw/maxresdefault.jpg",
+    views: 257136,
+    postedAt: new Date("2024-05-01"),
+    duration: 732,
+    thumbnailUrl: t1vestral,
+    videoUrl:
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  },
+  {
+    id: "4",
+    title: "Fnatic vs GAM Esports",
+    channel: {
+      name: "League of Legends",
+      id: "League of Legends",
+      profileUrl: LOL,
+    },
+    views: 1232300,
+    postedAt: new Date("2024-05-02"),
+    duration: 120,
+    thumbnailUrl: fnvgam,
+    videoUrl:
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  },
+  {
+    id: "5",
+    title: "TOP Esports vs Loud",
+    channel: {
+      name: "League of Legends",
+      id: "League of Legends",
+      profileUrl: LOL,
+    },
+    views: 112,
+    postedAt: new Date("2024-05-02"),
+    duration: 4343,
+    thumbnailUrl: topvloud,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
   {
     id: "8",
-    title: "Zig in 100 Seconds",
+    title: "Dhill Ducks vs Who is Goldfish",
     channel: {
-      name: "Fireship",
-      id: "Fireship",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+      name: "Overwatch",
+      id: "Overwatch",
+      profileUrl: owlogo,
     },
     views: 20323340,
-    postedAt: new Date("2023-09-09"),
+    postedAt: new Date("2024-04-20"),
     duration: 105,
-    thumbnailUrl: "https://i.ytimg.com/vi/kxT8-C1vmd4/maxresdefault.jpg",
+    thumbnailUrl: dhillvgold,
+    videoUrl:
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  },
+  {
+    id: "6",
+    title: "Faze Clan vs Natus Vincere",
+    channel: {
+      name: "Overwatch",
+      id: "Overwatch",
+      profileUrl: owlogo,
+    },
+    views: 10340,
+    postedAt: new Date("2024-03-31"),
+    duration: 54,
+    thumbnailUrl: owfvn,
+    videoUrl:
+      "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  },
+  {
+    id: "7",
+    title: "Vitality vs Cloud9",
+    channel: {
+      name: "Overwatch",
+      id: "Overwatch",
+      profileUrl: owlogo,
+    },
+    views: 10323340,
+    postedAt: new Date("2024-02-20"),
+    duration: 100,
+    thumbnailUrl: owvvc9,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
