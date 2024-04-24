@@ -10,6 +10,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Clips from "../assets/Clips_2.png";
+import Articles from "../assets/Articles_2.png";
 
 export default function Test() {
   const dispatch = useDispatch();
@@ -38,6 +40,7 @@ export default function Test() {
       }}
     >
       <Grid container spacing={2}>
+
         <Grid item xs={12} sm={2} md={3}>
           <Grid
             container
@@ -98,19 +101,35 @@ export default function Test() {
             alignItems="center"
             spacing={2}
           >
-            <Grid item>mainStream</Grid>
-            {shownHeadlines.map((headline) => (
+
+            <Grid item>
+              <img src="Clips_2.png" alt="Top Image" />
+            </Grid>
+            <Grid item>
+                <HeadlineCard headlineData={1} />
+              </Grid>
+              <Grid item>
+                <HeadlineCard headlineData={2} />
+              </Grid>
+              <Grid item>
+                <HeadlineCard headlineData={3} />
+              </Grid>
+            {/* {shownHeadlines.map((headline) => (
               <Grid item key={headline.id}>
                 <HeadlineCard headlineData={headline} />
               </Grid>
-            ))}
+            ))} */}
           </Grid>
         </Grid>
 
 
         <Grid item xs={12} sm={2} md={3}>
           <Grid container justifyContent="center" alignItems="center">
-            <Grid item>Highlights</Grid>
+
+          <Grid item>
+              <img src="Clips_2.png" alt="Top Image" />
+            </Grid>
+
           </Grid>
           <iframe
             width="400"
@@ -123,6 +142,8 @@ export default function Test() {
             allowFullScreen
             style={{ marginTop: "20px" }}
           ></iframe>
+          <iframe             width="400"
+            height="215" src="https://www.youtube.com/embed/NyxbqrG4Okg?si=1X0PvuPs1z7QM5FX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </Grid>
       </Grid>
     </div>

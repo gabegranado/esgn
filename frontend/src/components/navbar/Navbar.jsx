@@ -29,7 +29,7 @@ const Navbar = () => {
             <img
               src={Logo1}
               alt="logo"
-              className="w-18 md:cursor-pointer h-7"
+              className="w-27 md:cursor-pointer h-12"
             />
           </Link>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
