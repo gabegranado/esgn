@@ -71,8 +71,8 @@ export default function SingleWatch() {
     } else {
       return (
         <Typography variant="body1">
-          Team 1 Score: {teamScores[0]} <br />
-          Team 2 Score: {teamScores[1]}
+          Team BDS: {teamScores[0]} <br />
+          Team Vitality: {teamScores[1]}
         </Typography>
       );
     }
@@ -83,16 +83,14 @@ export default function SingleWatch() {
   return (
     <div>
       <div className="flex justify-center">
-        <iframe
-          width="860"
-          height="515"
-          src="https://www.youtube.com/embed/iUFvGIORfAY?si=Fkab1X6R5K67u8sH"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>{" "}
+      <iframe 
+      src="https://player.twitch.tv/?channel=dreamwetmoist&parent=localhost" 
+      frameborder="0"
+      allowfullscreen="true"
+      scrolling="no"
+      height="678"
+      width="920">
+      </iframe>
       </div>
       <div className="flex justify-center">
         <Paper style={{ padding: "20px" }}>
