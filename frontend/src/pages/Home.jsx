@@ -17,7 +17,6 @@ export default function Test() {
   const [shownHeadlines, setShownHeadlines] = useState([]);
 
   useEffect(() => {
-
     dispatch(getArticles());
   }, [dispatch]);
 
@@ -31,6 +30,7 @@ export default function Test() {
   return (
     <div
       style={{
+        backgroundColor: "#f0f0f0",
         minHeight: "100vh",
         paddingTop: "20px",
         paddingRight: "2px",
@@ -39,47 +39,66 @@ export default function Test() {
     >
       <Grid container spacing={2}>
         <Grid item xs={12} sm={2} md={3}>
-          <div style={{ paddingBottom: "10px" }}>
-            <img
-              src="/scores.png"
-              alt="Scores"
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </div>
           <Grid
             container
+            direction="column"
             justifyContent="center"
             alignItems="center"
             spacing={2}
           >
-            {shownHeadlines.map((headline, index) => (
-              <Grid item key={headline.id}>
-                <ScoreCard scoreData={headline} />
-              </Grid>
-            ))}
+            <Grid item>
+              <img src="Scores_Homepage.02.png" alt="Top Image" />
+            </Grid>
+            {/* First Score Card */}
+            <Grid item>Championship</Grid>
+            <ScoreCard
+              scoreData={{
+                leftImage: "/teamLogos/team-bds.png",
+                rightImage: "/teamLogos/233px-Team_Vitality_allmode.png",
+                score: "1 - 4",
+              }}
+            />
+            {/* Second Score Card */}
+            <Grid item>Upper Bracket Semi-Finals</Grid>
+
+            <ScoreCard
+              scoreData={{
+                leftImage: "/teamLogos/team-bds.png",
+                rightImage: "/teamLogos/karminecorp.png",
+                score: "4 - 3",
+              }}
+            />
+            {/* Third Score Card */}
+            <Grid item>Lower Bracket Semi-Finals</Grid>
+            <ScoreCard
+              scoreData={{
+                leftImage: "/teamLogos/karminecorp.png",
+                rightImage: "/teamLogos/233px-Team_Vitality_allmode.png",
+                score: "3 - 4",
+              }}
+            />
+            {/* Fourth Score Card */}
+            <Grid item>Lower Bracket Qaurter-Finals</Grid>
+            <ScoreCard
+              scoreData={{
+                leftImage: "/teamLogos/233px-Team_Vitality_allmode.png",
+                rightImage: "/teamLogos/Rule-One.jpg",
+                score: "4 - 0",
+              }}
+            />
           </Grid>
         </Grid>
 
         <Grid item xs={12} sm={6} md={6}>
           <Grid
             container
+
+            direction="column"
             justifyContent="center"
             alignItems="center"
             spacing={2}
           >
-            <Grid item>
-              <iframe
-                width="860"
-                height="515"
-                src="https://www.youtube.com/embed/iUFvGIORfAY?si=Fkab1X6R5K67u8sH"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>{" "}
-            </Grid>
-
+            <Grid item>mainStream</Grid>
             {shownHeadlines.map((headline) => (
               <Grid item key={headline.id}>
                 <HeadlineCard headlineData={headline} />
@@ -88,8 +107,22 @@ export default function Test() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>right</Paper>
+
+        <Grid item xs={12} sm={2} md={3}>
+          <Grid container justifyContent="center" alignItems="center">
+            <Grid item>Highlights</Grid>
+          </Grid>
+          <iframe
+            width="400"
+            height="215"
+            src="https://www.youtube.com/embed/p7luIxI-fKs?si=H_oLy-nxXGyf2UfH"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            style={{ marginTop: "20px" }}
+          ></iframe>
         </Grid>
       </Grid>
     </div>
