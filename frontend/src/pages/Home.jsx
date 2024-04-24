@@ -12,6 +12,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Clips from "../assets/Clips_2.png";
 import Articles from "../assets/Articles_2.png";
+import HighlightCard from "../components/Cards/HighlightCard.js";
 
 export default function Test() {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export default function Test() {
   return (
     <div
       style={{
-        backgroundColor: "#f0f0f0",
+        // backgroundColor: "#f0f0f0",
         minHeight: "100vh",
         paddingTop: "20px",
         paddingRight: "2px",
@@ -102,9 +103,12 @@ export default function Test() {
             spacing={2}
           >
 
-            <Grid item>
-              <img src="Clips_2.png" alt="Top Image" />
-            </Grid>
+<Grid container justifyContent="center" alignItems="center">
+  <Grid item>
+    <img src="Articles_2CROPS.png" alt="Top Image" style={{ width: "100%", maxWidth: "500px", height: "auto" }} />
+  </Grid>
+</Grid>
+
             <Grid item>
                 <HeadlineCard headlineData={1} />
               </Grid>
@@ -125,25 +129,22 @@ export default function Test() {
 
         <Grid item xs={12} sm={2} md={3}>
           <Grid container justifyContent="center" alignItems="center">
-
-          <Grid item>
-              <img src="Clips_2.png" alt="Top Image" />
-            </Grid>
+          <Grid container justifyContent="center" alignItems="center">
+  <Grid item>
+    <img src="CLIPS_CROP.png" alt="Top Image" style={{ width: "100%", maxWidth: "400px", height: "auto" }} />
+  </Grid>
+</Grid>
 
           </Grid>
-          <iframe
-            width="400"
-            height="215"
-            src="https://www.youtube.com/embed/p7luIxI-fKs?si=H_oLy-nxXGyf2UfH"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            style={{ marginTop: "20px" }}
-          ></iframe>
-          <iframe             width="400"
-            height="215" src="https://www.youtube.com/embed/NyxbqrG4Okg?si=1X0PvuPs1z7QM5FX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <HighlightCard url="https://www.youtube.com/embed/TPHpdPGTDLc?si=joy4go3_uhp9ZCZi" title="FINAL MATCH!! - NaVi vs paiN - HIGHLIGHTS - PGL CS2 Major Copenhagen 2024 | CS2
+"/>
+          <HighlightCard url="https://www.youtube.com/embed/IgutMA_AayI?si=rdRSHHZ3P0UEzRu6" title="TL vs FLY Highlights ALL GAMES | LCS Spring 2024 Playoffs GRAND-FINAL | Team Liquid vs FlyQuest
+" />
+          <HighlightCard url="https://www.youtube.com/embed/NyxbqrG4Okg?si=tgzcvdxL7uAoFr1O" title="GEN vs T1 Highlights ALL GAMES Grand Finals LCK 2024 Gen G vs T1 by Onivia
+"/>
+          <HighlightCard url="https://www.youtube.com/embed/88c-tyvOKjc?si=jKTeJQsBAtYSiMSX" title="Zen Epic Interview
+"/>
+
         </Grid>
       </Grid>
     </div>
