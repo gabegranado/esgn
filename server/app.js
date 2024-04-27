@@ -12,6 +12,9 @@ import homeRoutes from './routes/homeAPI.js';
 import streamsRoutes from './routes/streamsAPI.js';
 import teamRoutes from './routes/teamAPI.js';
 import userRoutes from './routes/userAPI.js';
+import gameRoutes from './routes/gameAPI.js';
+import scoreRoutes from './routes/scoreAPI.js';
+import subscribeRoutes from './routes/subscribeAPI.js';
 
 dotenv.config();
 const PORT = 4000;
@@ -27,7 +30,9 @@ app.use('/', homeRoutes);
 app.use('/streams', streamsRoutes);
 app.use('/teams', teamRoutes);
 app.use('/users', userRoutes);
-
+app.use('/games', gameRoutes);
+app.use('/scores', scoreRoutes);
+app.use('/handleSub', subscribeRoutes);
 // app.get('/', (req, res) => {
 //     res.json([
 //         {
